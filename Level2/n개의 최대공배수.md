@@ -42,7 +42,7 @@ function solution(arr) {
 
 ## ✔️ 참고
 
-[코딩테스트 연습 - 최솟값 만들기](https://programmers.co.kr/learn/courses/30/lessons/12941)
+[코딩테스트 연습 - N개의 최소공배수](https://programmers.co.kr/learn/courses/30/lessons/12953)
 
 [[제대로 수학공부] 약수란? 공약수란? 최대공약수란?](https://m.blog.naver.com/PostView.nhn?blogId=jnanna89&logNo=221442497785&proxyReferer=https:%2F%2Fwww.google.com%2F)
 
