@@ -1,16 +1,27 @@
 function solution(want, number, discount) {
-    let count = 0;
-    for (let i = 0; i < discount.length - 9; i++) {
-        const slice = discount.slice(i, i + 10);
+    let answer = 0;
+    let dict = {};
 
-        let flag = true;
-        for (let j = 0; j < want.length; j++) {
-            if (slice.filter(item => item === want[j]).length !== number[j]) {
-                flag = false;
-                break;
-            }
+    for (let i = 0; i < discount.length - 9; i++) {
+        for (let j = 0; j < want.length; j++)
+            dict[want[j]] = number[j];
+
+        for (let j = i; j < i + 10; j++) {
+            if (dict.hasOwnProperty(discount[j]))
+                dict[discount[j]]--;
         }
-        if (flag) count += 1;
+
+        let maxValue = 0;
+        for (let key in dict) {
+            if (dict.hasOwnProperty(key) && dict[key] > maxValue)
+                maxValue = dict[key];
+        }
+
+        if (maxValue === 0)
+            answer++;
+
+        dict = {};
     }
-    return count;
+
+    return answer;
 }
