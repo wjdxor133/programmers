@@ -18,6 +18,7 @@ function solution(board) {
             if (board[i][j] === 0) {
                 let isSafeCell = true;
 
+                // 해당 구역 주변에 1이 있으면, 안전 지대가 아님.
                 for (let k = 0; k < moves.length; k++) {
                     const newRow = i + moves[k][0];
                     const newCol = j + moves[k][1];
