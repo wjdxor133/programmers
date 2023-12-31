@@ -1,3 +1,7 @@
+// 방향이 햇갈렸던 이유 :
+//  동서남북은 기본적으로 지향을 나타내는 방향을 의미하는데, 대부분의 경우 서로 다른 방향을 가리킵니다.
+// x, y 대신 row, column 으로 설정
+
 function solution(park, routes) {
     const moveDirections = { 
         'N': [-1, 0], // 북쪽: 위로 이동
