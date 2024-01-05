@@ -12,10 +12,10 @@ function solution(players, callings) {
     callings.forEach((player) => {
         const playerIndex = playerRanking[player];
         if (playerIndex > 0) {
-            const temp = players[playerIndex - 1];
+            const rightFrontPlayer = players[playerIndex - 1];
             players[playerIndex - 1] = player;
-            players[playerIndex] = temp;
-            playerRanking[temp] = playerIndex;
+            players[playerIndex] = rightFrontPlayer;
+            playerRanking[rightFrontPlayer] = playerIndex;
             playerRanking[player] = playerIndex - 1;
         }
     });
