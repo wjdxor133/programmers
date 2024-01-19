@@ -30,7 +30,7 @@ function solution(n, results) {
                 
                 // 예를 들어, 1번 선수가 2번 선수 이김 && 2번 선수가 5번 선수 이겼을 때
                 if (graph[i][k] === 1 && graph[k][j] === 1) {
-                    // 1번 선수가 5번 선수를 이김
+                    // 그럼, 1번 선수 또한 5번 선수를 이김
                     graph[i][j] = 1;
                     graph[j][i] = -1;
                 }
